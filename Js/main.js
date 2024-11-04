@@ -79,7 +79,7 @@ const typed = new Typed('.multiple-text', {
 
 // Initialize email.js
 (function () {
-    emailjs.init("hDw-tVDs_mmewxfhw"); // Use your public key here
+    emailjs.init("hDw-tVDs_mmewxfhw");
 })();
 
 // Function to send email
