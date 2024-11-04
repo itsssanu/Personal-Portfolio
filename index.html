@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT-AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="Style/styles.css">
+   
+    <title>Personal Portfolio Design</title>
+</head>
+
+<body>
+    <!-- HEADER DESIGN -->
+    <header class="header">
+        <a href="#" class="logo">Portfolio.</a>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME DESIGN -->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, Myself</h3>
+            <h1>Anu Priya</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Driven by creativity and fueled by code, I craft experiences that blend beauty with functionality,
+                turning vision into impactful digital journeys.</p>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/anupriya-p/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.behance.net/anupriya1523"><i class="fa-brands fa-behance"></i></a>
+            </div>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="img/header-img.svg" alt="">
+        </div>
+    </section>
+
+    <!-- ABOUT DESIGN -->
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/about-img.svg" alt="">
+        </div>
+
+        <div class="about-content" id="about">
+            <h2 class="heading">About<span>Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui rerum tenetur, maxime omnis commodi
+                distinctio dolores reiciendis ducimus dolorem iure voluptates aspernatur esse eligendi dolore odit,
+                aliquam asperiores, fuga ipsam.</p>
+            <a href="#" class="btn">Read more</a>
+        </div>
+    </section>
+
+    <!-- SERVICES DESIGN -->
+
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+
+        <div class="services-content">
+            <div class="services-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Web development is the process of creating websites or web applications, focusing on both the
+                    user-facing design (front-end) and server-side functionality (back-end). It involves coding,
+                    structuring, and maintaining websites to ensure they are interactive, functional, and accessible.
+                </p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fa-solid fa-palette"></i>
+                <h3>UX/UI Desgining</h3>
+                <p>UX/UI design is the process of crafting user-friendly and visually engaging interfaces for digital
+                    products. UX focuses on usability and functionality, ensuring a seamless journey for users, while UI
+                    centers on the visual aspects, like layout, colors to make interactions appealing.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+
+            <div class="services-box">
+                <i class="fa-brands fa-android"></i>
+                <h3>App Development</h3>
+                <p>App development is the process of creating software applications for mobile devices or desktops,
+                    focusing on functionality, UX, and performance. It involves coding, designing interfaces, and
+                    testing to build apps that solve specific problems or provide entertainment.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO DESIGN -->
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Lastest <span>Projects</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="img/2.jpg">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Web development is the process of creating websites.</p>
+                    <i class="fa-regular fa-share-from-square"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="img/3.jpg">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>Web development is the process of creating websites.</p>
+                    <i class="fa-regular fa-share-from-square"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="img/1.jpg">
+                <div class="portfolio-layer">
+                    <h4>Web Design</h4>
+                    <p>UX/UI design is the process of crafting user-friendly.</p>
+                    <i class="fa-regular fa-share-from-square"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT DESIGN -->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form  onsubmit="sendMail(event)">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" id="name" class="item">
+                    <div class="error-txt">Full name can't be blank</div>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Name" id="email" class="item">
+                    <div class="error-txt">Email can't be blank</div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Mobile Number" id="phone" class="item">
+                    <div class="error-txt">Phone can't be blank</div>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" id="subject" class="item">
+                    <div class="error-txt">Subject can't be blank</div>
+                </div>
+            </div>
+
+            <div class="input-field">
+                <textarea id="message" cols="30" rows="6" placeholder="Your Message" class="item"></textarea>
+                <div class="error-txt">Message can't be blank</div>
+            </div>
+            <!-- <input type="text" value="Send Message" class="btn"> -->
+            <button type="submit" class="btn btn-primary">
+                Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </form>
+    </section>
+
+    <!-- FOOTER DESIGN -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by @anupriya-p | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+
+    </footer>
+
+    <script>
+        function sendMail(event) {
+            event.preventDefault(); // Prevent form from submitting and reloading the page
+        
+            var params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value,
+            };
+        
+            const serviceID = "service_mb14q32";
+            const templateID = "template_r2tr91s";
+        
+            emailjs
+                .send(serviceID, templateID, params)
+                .then((res) => {
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("message").value = "";
+                    console.log(res);
+                    alert("Message sent successfully!");
+                })
+                .catch((err) => console.log("Failed to send message", err));
+        }
+        </script>
+
+    <!-- SCROLL REVEAL JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- TYPED JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- SMTP JS -->
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+    <!-- EMAIL JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <!-- SWEELATER2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- MAIN JS -->
+    <script src="Js/main.js"></script>
+</body>
+
+</html>
+
