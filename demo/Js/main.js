@@ -169,5 +169,3 @@ function checkInputs() {
 
     return hasErrors; // Return true if any field is empty
 }
-
-

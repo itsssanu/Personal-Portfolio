@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="Style/styles.css">
-   
+
     <title>Personal Portfolio Design</title>
 </head>
 
@@ -35,17 +35,17 @@
 
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hi, Myself</h3>
+            <h3>Hello,</h3>
             <h1>Anu Priya</h1>
             <h3>And I'm a <span class="multiple-text"></span></h3>
             <p>Driven by creativity and fueled by code, I craft experiences that blend beauty with functionality,
                 turning vision into impactful digital journeys.</p>
             <div class="social-media">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.instagram.com/hey_dis_is_anu"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/anupriya-p/"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.behance.net/anupriya1523"><i class="fa-brands fa-behance"></i></a>
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="../demo/ANUPRIYA_RESUME.pdf" class="btn">Download CV</a>
         </div>
 
         <div class="home-img">
@@ -57,16 +57,23 @@
 
     <section class="about" id="about">
         <div class="about-img">
-            <img src="img/about-img.svg" alt="">
+            <div class="image-circle">
+            <img src="img/hero-image.png" alt="">
+        </div>
         </div>
 
         <div class="about-content" id="about">
-            <h2 class="heading">About<span>Me</span></h2>
-            <h3>Frontend Developer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui rerum tenetur, maxime omnis commodi
-                distinctio dolores reiciendis ducimus dolorem iure voluptates aspernatur esse eligendi dolore odit,
-                aliquam asperiores, fuga ipsam.</p>
-            <a href="#" class="btn">Read more</a>
+            <h2 class="heading">About <span>Me</span></h2>
+            <!-- <h3>Frontend Developer</h3> -->
+            <p>I'm Anupriya, an enthusiastic <span>Frontend Developer and UI/UX Designer</span> with a unique blend of technical
+                skills and creative vision. With a strong foundation in both coding and design principles, I strive to
+                create digital experiences that are not only visually appealing but also highly functional and
+                user-centric.</p>
+            <p>At the same time, my UI/UX skills allow me to create intuitive,
+                visually engaging layouts that keep users engaged and satisfied. In every project, my goal is to bridge
+                the gap between design and functionality, transforming ideas into impactful digital experiences that
+                make a difference.</p>
+            <a href="#contact" class="btn">Contact Me</a>
         </div>
     </section>
 
@@ -83,7 +90,7 @@
                     user-facing design (front-end) and server-side functionality (back-end). It involves coding,
                     structuring, and maintaining websites to ensure they are interactive, functional, and accessible.
                 </p>
-                <a href="#" class="btn">Read more</a>
+                <!-- <a href="#" class="btn">Read more</a> -->
             </div>
 
             <div class="services-box">
@@ -92,7 +99,7 @@
                 <p>UX/UI design is the process of crafting user-friendly and visually engaging interfaces for digital
                     products. UX focuses on usability and functionality, ensuring a seamless journey for users, while UI
                     centers on the visual aspects, like layout, colors to make interactions appealing.</p>
-                <a href="#" class="btn">Read more</a>
+                <!-- <a href="#" class="btn">Read more</a> -->
             </div>
 
             <div class="services-box">
@@ -101,7 +108,7 @@
                 <p>App development is the process of creating software applications for mobile devices or desktops,
                     focusing on functionality, UX, and performance. It involves coding, designing interfaces, and
                     testing to build apps that solve specific problems or provide entertainment.</p>
-                <a href="#" class="btn">Read more</a>
+                <!-- <a href="#" class="btn">Read more</a> -->
             </div>
         </div>
     </section>
@@ -146,7 +153,7 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form  onsubmit="sendMail(event)">
+        <form onsubmit="sendMail(event)">
             <div class="input-box">
                 <div class="input-field">
                     <input type="text" placeholder="Full Name" id="name" class="item">
@@ -193,32 +200,6 @@
 
     </footer>
 
-    <script>
-        function sendMail(event) {
-            event.preventDefault(); // Prevent form from submitting and reloading the page
-        
-            var params = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                message: document.getElementById("message").value,
-            };
-        
-            const serviceID = "service_mb14q32";
-            const templateID = "template_r2tr91s";
-        
-            emailjs
-                .send(serviceID, templateID, params)
-                .then((res) => {
-                    document.getElementById("name").value = "";
-                    document.getElementById("email").value = "";
-                    document.getElementById("message").value = "";
-                    console.log(res);
-                    alert("Message sent successfully!");
-                })
-                .catch((err) => console.log("Failed to send message", err));
-        }
-        </script>
-
     <!-- SCROLL REVEAL JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -238,7 +219,30 @@
 
     <!-- MAIN JS -->
     <script src="Js/main.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCdG_mLP-Uq-9UFVjJEktqxBj2yzR-3_F0",
+            authDomain: "personal-portfolio-562e4.firebaseapp.com",
+            projectId: "personal-portfolio-562e4",
+            storageBucket: "personal-portfolio-562e4.firebasestorage.app",
+            messagingSenderId: "139757929187",
+            appId: "1:139757929187:web:10fb215502b4c7ff55fbd6",
+            measurementId: "G-6M2LKCRQKV"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 
 </html>
-

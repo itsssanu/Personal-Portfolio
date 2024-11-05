@@ -13,10 +13,11 @@
 }
 
 :root{
-    --bg-color: #191f36;
+    --bg-color: #000;
+    --bg-sec--color: #0e0e0e;
     --snd-bf-color: #262840;
     --text-color: #fff;
-    --main-color: #59B2F4;
+    --main-color: #9448ec;
 }
 
 html{
@@ -40,9 +41,9 @@ section{
     left: 0;
     width:100%;
     padding: 2rem 9%;
-    /* background: var(--bg-color); */
+    background: var(--bg-color);
     background: linear-gradient(rgb(15, 15, 15), var(--bg-color));
-    box-shadow: 0 0 0.8rem var(--snd-bf-color);
+    box-shadow: 0 0 0.1rem var(--text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,7 +79,7 @@ section{
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    background-image: url(../img/banner-bg.png);
+    /* background-image: url(../img/banner-bg.png); */
     background-size: cover;        
     background-position: center;    
     background-repeat: no-repeat;   
@@ -127,6 +128,7 @@ span{
 
 .home-content p{
     font-size: 1.8rem;
+    width: 90%;
 }
 
 .social-media a{
@@ -155,7 +157,7 @@ span{
     padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: none;
     font-size: 1.6rem;
     color: var(--bg-color);
     letter-spacing: .1rem;
@@ -164,7 +166,7 @@ span{
 }
 
 .btn:hover{
-    box-shadow: none;
+    box-shadow:  0 0 1rem var(--main-color);
 }
 
 /* About */
@@ -174,13 +176,21 @@ span{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: var(--snd-bf-color);
+    background: var(--bg-sec--color);
+}
+
+.about-img {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center the circle and image */
+    align-items: center;
 }
 
 .about-img img {
-    width: 35vw;
+    width: 30vw;
     margin-right: 6rem;
     animation: floatImage 4s ease-in-out infinite;
+    z-index: 1;
 }
 @keyframes floatImage{
     0%{
@@ -193,6 +203,20 @@ span{
         transform: translateY(0);
     }
 }
+
+.image-circle{
+    position: relative;
+    margin-right: 10rem;
+    width: 28vw;
+    height: 28vw;
+    background: linear-gradient(rgba(63, 63, 63, 0.1), #181818);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
 
 
 .heading{
@@ -210,8 +234,13 @@ span{
 }
 
 .about-content p{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 2rem 0 3rem;
+}
+
+.about-content p span{
+    font-weight: bold;
+    color: var(--main-color);
 }
 
 /* Services */
@@ -230,7 +259,7 @@ span{
 
 .services-content .services-box{
     flex: 1 1 30rem;
-    background: var(--snd-bf-color);
+    background: var(--bg-sec--color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
@@ -252,11 +281,12 @@ span{
 
 .services-box h3{
     font-size: 2.6rem;
+    margin: 2rem 0 3rem;
 }
 
 .services-box p{
     font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+    margin: 2rem 0 3rem;
     text-align: justify;
     line-height: 1.4;
 }
@@ -264,7 +294,7 @@ span{
 /* Portfolio */
 
 .portfolio{
-    background: var(--snd-bf-color);
+    background: var(--bg-sec--color);
 }
 
 .portfolio h2{
@@ -314,7 +344,7 @@ span{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgb(0,0,0,0.1), var(--main-color));
+    background: linear-gradient(rgb(0,0,0,0.2), var(--bg-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -384,9 +414,10 @@ span{
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--snd-bf-color);
+    background: var(--bg-sec--colorr);
     border-radius: .8rem;
     max-width: .7rem 0;
+    border: 0.2rem solid #3a3a3a;
 }
 
 .contact form .input-field.error .error-txt {
@@ -419,7 +450,7 @@ span{
     margin-top: 2rem;
     padding: 1rem 2rem;
     font-size: 1.6rem;
-    color: var(--snd-bf-color);
+    color: var(--bg-color);
     background-color: var(--main-color);
     border: none;
     border-radius: .8rem;
@@ -441,7 +472,7 @@ span{
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--snd-bf-color);
+    background: var(--bg-sec--color);
 }
 
 .footer-text{
@@ -544,8 +575,14 @@ span{
         flex-direction: column;
     }
     .about-img img{
-        width: 80vw;
-        margin-top: 4rem;
+        width: 60vw;
+        margin-top: 1rem;
+        margin-right: 3rem;
+    }
+    .image-circle {
+        width: 60vw; /* Adjust circle size for smaller screens */
+        height: 60vw;
+        margin-right: 3rem;
     }
     .services h2{
         margin-bottom: 3rem;
@@ -563,8 +600,14 @@ span{
         grid-template-columns: 1fr;
     }
     .about-img img{
-        width: 70vw;
-        margin-top: 4rem;
+        width: 50vw;
+        margin-top: 1rem;
+        margin-right: 2.4rem;
+    }
+    .image-circle {
+        width: 50vw; /* Adjust circle size for smaller screens */
+        height: 50vw;
+        margin-right: 2.4rem;
     }
 }
 
