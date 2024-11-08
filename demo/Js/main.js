@@ -47,7 +47,7 @@ ScrollReveal({
 ScrollReveal().reveal('.home-content, heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .portfolio-box, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img',  { origin: 'left' });
-ScrollReveal().reveal('.home-content p, about-content, .services-content', { origin: 'right' });
+ScrollReveal().reveal('.home-content p, .about-content, .services-content', { origin: 'right' });
 
 
 // typed js
@@ -168,4 +168,47 @@ function checkInputs() {
     }
 
     return hasErrors; // Return true if any field is empty
+}
+
+function toggleDetails(card) { 
+    const paragraphs = card.querySelectorAll('p');
+    paragraphs.forEach(paragraph => {
+        // Toggle visibility of paragraphs
+        paragraph.style.display = paragraph.style.display === 'none' ? 'block' : 'none';
+    });
+}
+
+
+document.querySelectorAll('.experience-item').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
+});
+
+// Get the "angle up" icon element
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+// Show the icon when the user scrolls down 100px from the top
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 100) {
+        scrollTopBtn.style.display = 'block';
+    } else {
+        scrollTopBtn.style.display = 'none';
+    }
+});
+
+
+function showSlide(index) {
+    // Get all project titles and remove 'active' class
+    const titles = document.querySelectorAll('.project-title');
+    titles.forEach(title => title.classList.remove('active'));
+
+    // Add 'active' class to clicked title
+    titles[index].classList.add('active');
+
+    // Get all slides and hide them
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(slide => slide.classList.remove('active'));
+
+    slides[index].classList.add('active');
 }

@@ -44,6 +44,7 @@
                 <a href="https://www.instagram.com/hey_dis_is_anu"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/anupriya-p/"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.behance.net/anupriya1523"><i class="fa-brands fa-behance"></i></a>
+                <a href="https://github.com/itsssanu"><i class="fa-brands fa-github"></i></i></a>
             </div>
             <a href="../demo/ANUPRIYA_RESUME.pdf" class="btn">Download CV</a>
         </div>
@@ -58,21 +59,35 @@
     <section class="about" id="about">
         <div class="about-img">
             <div class="image-circle">
-            <img src="img/hero-image.png" alt="">
-        </div>
+                <img src="img/hero-image.png" alt="">
+            </div>
         </div>
 
         <div class="about-content" id="about">
             <h2 class="heading">About <span>Me</span></h2>
             <!-- <h3>Frontend Developer</h3> -->
-            <p>I'm Anupriya, an enthusiastic <span>Frontend Developer and UI/UX Designer</span> with a unique blend of technical
-                skills and creative vision. With a strong foundation in both coding and design principles, I strive to
-                create digital experiences that are not only visually appealing but also highly functional and
-                user-centric.</p>
-            <p>At the same time, my UI/UX skills allow me to create intuitive,
-                visually engaging layouts that keep users engaged and satisfied. In every project, my goal is to bridge
-                the gap between design and functionality, transforming ideas into impactful digital experiences that
-                make a difference.</p>
+            <p>I'm Anupriya, an enthusiastic Frontend Developer and UI/UX Designer with a unique blend of
+                technical
+                skills and creative vision. With a strong foundation in both coding and design principles.</p>
+            <!-- Work Experience Section -->
+            <div class="work-experience">
+                <h3>Work Experience</h3>
+                <div class="experience-list">
+                    <div class="experience-item" onclick="toggleDetails(this)">
+                        <h4>Corvanta Analytics</h4>
+                        <span class="experience-duration">| August 2023 - Present</span>
+                        <p> &#9654 Developed responsive and user-friendly interfaces using modern JavaScript frameworks, including React.js.</p>
+                        <p> &#9654 Implemented reusable components and design systems, enhancing code maintainability and consistency.</p>
+                        <p> &#9654 Contributed to open-source projects, showcasing initiative and a commitment to community development.</p>
+                    </div>
+                    <div class="experience-item" onclick="toggleDetails(this)">
+                        <h4>UI/UX Intern at Digisailor</h4>
+                        <span class="experience-duration">| January 2023 - June 2023</span>
+                        <p> &#9654 Conducted user research and usability testing, gathering valuable insights to inform design decisions and improve user experiences.</p>
+                        <p> &#9654 Created design systems and component libraries to maintain consistency across projects and streamline development.</p>
+                    </div>
+                </div>
+            </div>
             <a href="#contact" class="btn">Contact Me</a>
         </div>
     </section>
@@ -86,9 +101,14 @@
             <div class="services-box">
                 <i class="fa-solid fa-code"></i>
                 <h3>Web Development</h3>
-                <p>Web development is the process of creating websites or web applications, focusing on both the
-                    user-facing design (front-end) and server-side functionality (back-end). It involves coding,
-                    structuring, and maintaining websites to ensure they are interactive, functional, and accessible.
+                <div class="technologies">
+                    <span class="tech-item">React.js</span>
+                    <span class="tech-item">HTML5</span>
+                    <span class="tech-item">CSS3</span>
+                </div>
+                <p>From the ground up, I focus on building applications that can scale as your business grows,
+                    seamlessly handling more data and more users. I use component-based architecture and modular design
+                    principles to ensure flexibility and easy maintenance.
                 </p>
                 <!-- <a href="#" class="btn">Read more</a> -->
             </div>
@@ -96,18 +116,26 @@
             <div class="services-box">
                 <i class="fa-solid fa-palette"></i>
                 <h3>UX/UI Desgining</h3>
-                <p>UX/UI design is the process of crafting user-friendly and visually engaging interfaces for digital
-                    products. UX focuses on usability and functionality, ensuring a seamless journey for users, while UI
-                    centers on the visual aspects, like layout, colors to make interactions appealing.</p>
+                <div class="technologies">
+                    <span class="tech-item">Figma</span>
+                    <span class="tech-item">AdobeXD</span>
+                    <span class="tech-item">InVision</span>
+                </div>
+                <p>I specialize in designing wireframes and prototypes to create intuitive, user-centered interfaces
+                    that are optimized for both engagement and accessibility.</p>
                 <!-- <a href="#" class="btn">Read more</a> -->
             </div>
 
             <div class="services-box">
                 <i class="fa-brands fa-android"></i>
-                <h3>App Development</h3>
-                <p>App development is the process of creating software applications for mobile devices or desktops,
-                    focusing on functionality, UX, and performance. It involves coding, designing interfaces, and
-                    testing to build apps that solve specific problems or provide entertainment.</p>
+                <h3>Responsive Design</h3>
+                <div class="technologies">
+                    <span class="tech-item">CSS3</span>
+                    <span class="tech-item">Tailwind</span>
+                    <span class="tech-item">Bootstrap</span>
+                </div>
+                <p>I specialize in creating responsive web designs that adapt seamlessly to different screen sizes,
+                    ensuring a consistent and engaging user experience across desktops, tablets, and smartphones.</p>
                 <!-- <a href="#" class="btn">Read more</a> -->
             </div>
         </div>
@@ -118,34 +146,47 @@
     <section class="portfolio" id="portfolio">
         <h2 class="heading">Lastest <span>Projects</span></h2>
 
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="img/2.jpg">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Web development is the process of creating websites.</p>
-                    <i class="fa-regular fa-share-from-square"></i>
-                </div>
+        <div class="slider-container">
+            <div class="project-title-container">
+                <div class="project-title active" onclick="showSlide(0)">Insight Health</div>
+                <div class="project-title" onclick="showSlide(1)">PSB Acadmey</div>
+                <div class="project-title" onclick="showSlide(2)">Corvanta Pay</div>
             </div>
-
-            <div class="portfolio-box">
-                <img src="img/3.jpg">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Web development is the process of creating websites.</p>
-                    <i class="fa-regular fa-share-from-square"></i>
+            <div class="slider-container">
+                <div class="slide active">
+                    <div class="project-info-container">
+                        <img src="img/2.jpg" alt="Insight Health">
+                        <div class="project-info">
+                            <h2>Insight Health</h2>
+                            <p>From the ground up, I focus on building applications that can scale as your business grows,
+                                seamlessly handling more data and more users. I use component-based architecture and modular design
+                                principles to ensure flexibility and easy maintenance.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="img/1.jpg">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>UX/UI design is the process of crafting user-friendly.</p>
-                    <i class="fa-regular fa-share-from-square"></i>
+                <div class="slide">
+                    <div class="project-info-container">
+                        <img src="img/1.jpg" alt="PSB Acadmey">
+                        <div class="project-info">
+                            <h2>PSB Acadmey</h2>
+                            <p>From the ground up, I focus on building applications that can scale as your business grows,
+                                seamlessly handling more data and more users. I use component-based architecture and modular design
+                                principles to ensure flexibility and easy maintenance.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <div class="slide">
+                    <div class="project-info-container">
+                        <img src="img/3.jpg" alt="Corvanta Pay">
+                        <div class="project-info">
+                            <h2>Corvanta Pay</h2>
+                            <p>From the ground up, I focus on building applications that can scale as your business grows,
+                                seamlessly handling more data and more users. I use component-based architecture and modular design
+                                principles to ensure flexibility and easy maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+          </div>
     </section>
 
     <!-- CONTACT DESIGN -->
@@ -194,7 +235,7 @@
             <p>Copyright &copy; 2024 by @anupriya-p | All Rights Reserved.</p>
         </div>
 
-        <div class="footer-iconTop">
+        <div class="footer-iconTop" id="scrollTopBtn">
             <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
         </div>
 
